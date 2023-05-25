@@ -23,6 +23,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <nav class="navbar navbar-expand-xl bg-white fixed-top"  id="scrollSpy">
@@ -158,7 +159,7 @@
     </nav>
     <main data-bs-spy="scroll" data-bs-target="#scrollSpy" data-bs-offset="50" tabindex="0">
       <section id="home" class="py-5 bg-body-secondary">
-        <div class="container text-center justify-content-center">
+        <div class="container text-center justify-content-center" data-aos="slide-left">
           <div class="row justify-content-between align-items-center flex-column-reverse flex-lg-row">
             <div class="col-lg-5 text-center text-lg-start">
               <h1 class="pb-3 display-3">ENJOY YOUR HEALTHY</br>DELICIOUS FOOD</h1>
@@ -181,13 +182,14 @@
           </div>
         </div>
       </section>
+      <!-- About -->
       <section id="about" class="py-5">
         <div class="container text-center">
-          <div class="header pb-5">
+          <div class="header pb-5" data-aos="fade-down" data-aos="zoom-in">
             <h6 class="text-body-secondary pb-2 opacity-50">ABOUT US</h6>
             <h1 class="display-4 fw-lighter">LEARN MORE <span class="text-danger">ABOUT US</span></h1>
           </div>
-          <div class="row justify-content-lg-around pb-5">
+          <div class="row justify-content-lg-around pb-5" data-aos="flip-right" data-aos="fade-up-left">
             <div class="col-lg-6 d-flex align-items-end mb-3 mb-lg-0">
               <div class="aboutContent bg-white px-5 py-3 mb-5 mx-auto w-75">
                 <p class="fw-bold lead">Book a Table</p>
@@ -203,8 +205,8 @@
               </ul>
               <p class="lead">Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
               <div class="aboutImage">
-                <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/about-2.jpg" alt="" class="img-fluid
-                ">
+                <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/about-2.jpg" alt="" class="img-fluid">
+                <a href="" type="button" class="d-inline-block" data-bs-toggle="modal" data-bs-target="#watchVideo"></a>
               </div>
             </div>
           </div>
@@ -212,7 +214,7 @@
       </section>
       <!-- Why choose Yummy -->
       <section id="whychoose" class="py-5 bg-body-secondary text-center">
-        <div class="container">
+        <div class="container" data-aos="zoom-out-right">
           <div class="row align-items-start align-items-xl-center">
             <div class="col-lg-4 mb-4 mb-xl-0">
               <div class="why-box bg-danger text-white text-start p-4">
@@ -251,7 +253,7 @@
       </section>
       <!-- Numbers of Projects -->
       <section class="py-5 text-center" id="projects">
-        <div class="container">
+        <div class="container" data-aos="slide-down">
           <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
             <div class="col p-5">
               <p class="lead display-4 fw-bold text-white">232</p>
@@ -275,11 +277,11 @@
       <!-- Menu -->
       <section id="menu" class="py-5 text-center">
         <div class="container">
-          <div class="header pb-3">
+          <div class="header pb-3" data-aos="flip-down">
             <h6 class="text-body-secondary pb-2 opacity-50">OUR MENU</h6>
             <h1 class="display-4 fw-lighter">CHECK OUT <span class="text-danger">YUMMY MENU</span></h1>
           </div>
-          <div class="row">
+          <div class="row" data-aos="zoom-in-left">
             <ul class="nav justify-content-center pb-3" id="myTab" role="tablist">
               <li class="nav-item mx-2" role="presentation">
                 <button class="nav-link active fs-5 fw-light text-secondary-emphasis" id="starters-tab" data-bs-toggle="tab" data-bs-target="#starters-tab-pane" type="button" role="tab" aria-controls="starters-tab-pane" aria-selected="true">Starters</button>
@@ -363,7 +365,7 @@
                   </div>
                 </div>
               </div>
-              <div class="tab-pane fade" id="breakfast-tab-pane" role="tabpanel" aria-labelledby="breakfast-tab" tabindex="0">
+              <div class="tab-pane fade" id="breakfast-tab-pane" role="tabpanel" aria-labelledby="breakfast-tab" tabindex="0" data-aos="slide-left">
                 <div class="menu-header pt-3">
                   <h6 class="text-body-secondary opacity-75 fw-normal m-0 small">MENU</h6>
                   <h3 class="display-6 fw-medium text-danger">Breakfast</h3>
@@ -572,12 +574,12 @@
       </section>
       <!-- Testimonials -->
       <section id="testimomial" class="py-5 text-center bg-body-secondary">
-        <div class="header mb-5 pb-3">
+        <div class="header mb-5 pb-3" data-aos="fade-up">
           <h6 class="text-body-secondary pb-2 opacity-50">TESTIMONIALS</h6>
           <h1 class="display-4 fw-lighter">WHAT ARE THEY <span class="text-danger">SAYING ABOUT US</span></h1>
         </div>
-        <div class="container">
-          <div id="testimonialsIndicators" class="carousel slide pb-5">
+        <div class="container" data-aos="slide-up">
+          <div id="testimonialsIndicators" class="carousel slide pb-5" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <div class="row w-75 mx-auto">
@@ -683,12 +685,12 @@
       </section>
       <!-- Events -->
       <section id="event" class="py-5 text-center">
-        <div class="header mb-5 pb-3">
+        <div class="header mb-5 pb-3" data-aos="zoom-in-down">
           <h6 class="text-body-secondary pb-2 opacity-50">EVENTS</h6>
           <h1 class="display-4 fw-lighter">SHARE <span class="text-danger">YOUR MOMENTS</span> IN OUR RESTAURANT</h1>
         </div>
         <!-- Swiper -->
-        <div class="swiper mySwiper">
+        <div class="swiper mySwiper" data-aos="fade-down-right">
           <div class="swiper-wrapper pb-5">
             <div class="swiper-slide d-none d-xl-block slide-1">
               <div class="card border-0 img-1">
@@ -777,13 +779,13 @@
       </section>
       <!-- Chefs -->
       <section id="chefs" class="py-5 text-center bg-body-secondary">
-        <div class="header mb-5 pb-3">
+        <div class="header mb-5 pb-3" data-aos="flip-left">
           <h6 class="text-body-secondary pb-2 opacity-50">CHEFS</h6>
           <h1 class="display-4 fw-lighter">OUR <span class="text-danger">PROFFESIONAL</span> CHEFS</h1>
         </div>
-        <div class="container">
+        <div class="container" data-aos="zoom-out-up">
           <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-            <div class="col">
+            <div class="col mb-5 mb-lg-0">
               <div class="card shadow-sm mb-4 h-100 position-relative">
                 <div class="card-image position-relative">
                   <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/chefs/chefs-1.jpg" alt="Chef1" class="card-img-top img-fluid">
@@ -802,7 +804,7 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <div class="col mb-5 mb-lg-0">
               <div class="card shadow-sm mb-4 h-100">
                 <div class="card-image position-relative">
                   <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/chefs/chefs-2.jpg" alt="Chef2" class="card-img-top img-fluid">
@@ -821,7 +823,7 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <div class="col mb-5 mb-lg-0">
               <div class="card shadow-sm mb-4 h-100">
                 <div class="card-image position-relative">
                   <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/chefs/chefs-3.jpg" alt="Chef3" class="card-img-top img-fluid">
@@ -845,11 +847,11 @@
       </section>
       <!-- Book a table -->
       <section id="bookatable" class="py-5 text-center">
-        <div class="header mb-5 pb-3">
+        <div class="header mb-5 pb-3" data-aos="fade-right">
           <h6 class="text-body-secondary pb-2 opacity-50">BOOK A TABLE</h6>
           <h1 class="display-4 fw-lighter">BOOK <span class="text-danger">YOUR STAY</span> WITH US</h1>
         </div>
-        <div class="container bg-body-secondary">
+        <div class="container bg-body-secondary" data-aos="zoom-out">
           <div class="row">
             <div class="col-lg-4 image"></div>
             <div class="col-lg-8">
@@ -884,12 +886,12 @@
         </div>
       </section>
       <!-- Gallery -->
-      <section id="gallery" class="py-5 bg-body-secondary text-center">
+      <section id="gallery" class="py-5 bg-body-secondary text-center" data-aos="flip-up">
         <div class="header mb-2 pb-3">
           <h6 class="text-body-secondary pb-2 opacity-50">GALLERY</h6>
           <h1 class="display-4 fw-lighter">CHECK <span class="text-danger">OUR GALLERY</span></h1>
         </div>
-        <div class="container">
+        <div class="container" data-aos="slide-right">
           <div class="swiper gallerySwiper" id="gallery-wrapper">
             <div class="swiper-wrapper pb-5 d-flex align-items-center">
               <div class="swiper-slide gallery-slide">
@@ -922,12 +924,12 @@
         </div>
       </section>
       <!-- Contact -->
-      <section id="contact" class="py-5 text-center">
+      <section id="contact" class="py-5 text-center" data-aos="fade-left">
         <div class="header mb-2 pb-3">
           <h6 class="text-body-secondary pb-2 opacity-50">CONTACT</h6>
           <h1 class="display-4 fw-lighter">NEED HELP? <span class="text-danger">CONTACT US</span></h1>
         </div>
-        <div class="container">
+        <div class="container" data-aos="fade-up-right">
           <div class="row gy-3 mb-5">
             <div class="col-md-6">
               <div class="contact-body h-100 bg-body-secondary d-flex align-items-center p-4">
@@ -987,7 +989,7 @@
       </section>
       <!-- Footer -->
       <footer class="pt-5 text-center bg-dark text-light">
-        <div class="container">
+        <div class="container" data-aos="zoom-in-up">
           <div class="row gy-4 mb-5">
             <div class="col-lg-3 col-md-6 d-flex">
               <i class="bi bi-geo-alt fs-4 me-3"></i>
@@ -1021,7 +1023,7 @@
             </div>
           </div>
           <div class="row text-secondary border-top border-1 border-secondary border-opacity-50 pt-5">
-            <p class="lead">&copy; Copyright <b>TUHONGLE</b>. All Rights Reversed</p>
+            <p class="lead fw-medium">&copy; Copyright <i class="fw-bold text-light">TUHONGLE</i>. All Rights Reversed</p>
             <p>Design by <a href="" class="text-light text-decoration-none">ME</a></p>
           </div>
         </div>
@@ -1043,6 +1045,9 @@
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- AOS animation JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     
     <!-- ======= bootstrap 5 javascript here! ======= -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>

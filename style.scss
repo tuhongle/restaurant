@@ -146,42 +146,68 @@ main {
             background: url("https://bootstrapmade.com/demo/templates/Yummy/assets/img/about.jpg") center center / cover;
         }
 
+        ul.lead {
+            li {
+                position: relative;
+                padding-left: 40px;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    left: 0;
+                    top: 10%;
+                    background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iI0RDMzU0NSIgY2xhc3M9ImJpIGJpLWNoZWNrMi1hbGwiIHZpZXdCb3g9IjAgMCAxNiAxNiI+CiAgPHBhdGggZD0iTTEyLjM1NCA0LjM1NGEuNS41IDAgMCAwLS43MDgtLjcwOEw1IDEwLjI5MyAxLjg1NCA3LjE0NmEuNS41IDAgMSAwLS43MDguNzA4bDMuNSAzLjVhLjUuNSAwIDAgMCAuNzA4IDBsNy03em0tNC4yMDggNy0uODk2LS44OTcuNzA3LS43MDcuNTQzLjU0MyA2LjY0Ni02LjY0N2EuNS41IDAgMCAxIC43MDguNzA4bC03IDdhLjUuNSAwIDAgMS0uNzA4IDB6Ii8+CiAgPHBhdGggZD0ibTUuMzU0IDcuMTQ2Ljg5Ni44OTctLjcwNy43MDctLjg5Ny0uODk2YS41LjUgMCAxIDEgLjcwOC0uNzA4eiIvPgo8L3N2Zz4=") no-repeat center center / cover;
+                }
+            }
+        }
+
         .aboutImage {
             position: relative;
 
-            &:hover {
-                &::after {
-                    cursor: pointer;
-                    transform: translate(-50%, -50%) scale(5);
-                    opacity: 0;
-                    transition: all 1s linear;
-                }
-            }
-
-            &::before {
-                content: "";
-                @include circle(70px);
+            a {
                 position: absolute;
-                top: 50%;
-                left: 50%;
-                background-color: #DC3545;
-                box-shadow: 0 0 0 15px rgba(178, 34, 34, 0.7);
-                animation: pulse-rate 2s linear infinite;
-            }
-
-            &::after {
-                content: "";
-                display: inline-block;
-                position: absolute;
+                width: 100px;
+                height: 100px;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iI0ZGRkZGRiIgY2xhc3M9ImJpIGJpLXBsYXktZmlsbCIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICA8cGF0aCBkPSJtMTEuNTk2IDguNjk3LTYuMzYzIDMuNjkyYy0uNTQuMzEzLTEuMjMzLS4wNjYtMS4yMzMtLjY5N1Y0LjMwOGMwLS42My42OTItMS4wMSAxLjIzMy0uNjk2bDYuMzYzIDMuNjkyYS44MDIuODAyIDAgMCAxIDAgMS4zOTN6Ii8+Cjwvc3ZnPg==");
-                background-repeat: no-repeat;
-                background-position: center center;
-                background-size: cover;
-                width: 40px;
-                height: 40px;
+
+                &:hover {
+                    &::after {
+                        cursor: pointer;
+                        transform: translate(-50%, -50%) scale(5);
+                        opacity: 0;
+                        transition: all 1s linear;
+                    }
+                }
+
+                &::before {
+                    content: "";
+                    @include circle(70px);
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    background-color: #DC3545;
+                    box-shadow: 0 0 0 15px rgba(178, 34, 34, 0.7);
+                    animation: pulse-rate 2s linear infinite;
+                }
+
+                &::after {
+                    content: "";
+                    display: inline-block;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iI0ZGRkZGRiIgY2xhc3M9ImJpIGJpLXBsYXktZmlsbCIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICA8cGF0aCBkPSJtMTEuNTk2IDguNjk3LTYuMzYzIDMuNjkyYy0uNTQuMzEzLTEuMjMzLS4wNjYtMS4yMzMtLjY5N1Y0LjMwOGMwLS42My42OTItMS4wMSAxLjIzMy0uNjk2bDYuMzYzIDMuNjkyYS44MDIuODAyIDAgMCAxIDAgMS4zOTN6Ii8+Cjwvc3ZnPg==");
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: cover;
+                    width: 40px;
+                    height: 40px;
+                }
             }
         }
     }

@@ -117,16 +117,37 @@ main #about .col-lg-6 {
   min-height: 500px !important;
   background: url("https://bootstrapmade.com/demo/templates/Yummy/assets/img/about.jpg") center center/cover;
 }
+main #about ul.lead li {
+  position: relative;
+  padding-left: 40px;
+}
+main #about ul.lead li::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  top: 10%;
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iI0RDMzU0NSIgY2xhc3M9ImJpIGJpLWNoZWNrMi1hbGwiIHZpZXdCb3g9IjAgMCAxNiAxNiI+CiAgPHBhdGggZD0iTTEyLjM1NCA0LjM1NGEuNS41IDAgMCAwLS43MDgtLjcwOEw1IDEwLjI5MyAxLjg1NCA3LjE0NmEuNS41IDAgMSAwLS43MDguNzA4bDMuNSAzLjVhLjUuNSAwIDAgMCAuNzA4IDBsNy03em0tNC4yMDggNy0uODk2LS44OTcuNzA3LS43MDcuNTQzLjU0MyA2LjY0Ni02LjY0N2EuNS41IDAgMCAxIC43MDguNzA4bC03IDdhLjUuNSAwIDAgMS0uNzA4IDB6Ii8+CiAgPHBhdGggZD0ibTUuMzU0IDcuMTQ2Ljg5Ni44OTctLjcwNy43MDctLjg5Ny0uODk2YS41LjUgMCAxIDEgLjcwOC0uNzA4eiIvPgo8L3N2Zz4=") no-repeat center center/cover;
+}
 main #about .aboutImage {
   position: relative;
 }
-main #about .aboutImage:hover::after {
+main #about .aboutImage a {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main #about .aboutImage a:hover::after {
   cursor: pointer;
   transform: translate(-50%, -50%) scale(5);
   opacity: 0;
   transition: all 1s linear;
 }
-main #about .aboutImage::before {
+main #about .aboutImage a::before {
   content: "";
   width: 70px;
   height: 70px;
@@ -138,7 +159,7 @@ main #about .aboutImage::before {
   box-shadow: 0 0 0 15px rgba(178, 34, 34, 0.7);
   animation: pulse-rate 2s linear infinite;
 }
-main #about .aboutImage::after {
+main #about .aboutImage a::after {
   content: "";
   display: inline-block;
   position: absolute;
