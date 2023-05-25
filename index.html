@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="main.js"></script>
+    <title>Restaurant Demo</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-xl bg-white fixed-top"  id="scrollSpy">
+      <div class="container-sm justify-content-between align-items-center py-3">
+        <a class="navbar-brand" href="#">
+          <img src="./assets/logo Tu copy.png" alt="logo" class="img-fluid" />
+        </a>
+        <div
+          class="offcanvas offcanvas-end px-xl-5"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header ms-auto pt-5 pe-5">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div
+            class="offcanvas-body text-body-secondary fw-medium px-0 justify-content-xl-center"
+          >
+            <ul
+              class="navbar-nav justify-content-center align-items-xl-center gap-4 flex-grow-0"
+            >
+              <li class="nav-item">
+                <a
+                  class="nav-link ps-3 pb-3 px-xl-1 pb-xl-2 active"
+                  aria-current="page"
+                  href="#home"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ps-3 pb-3 px-xl-1 pb-xl-2" href="#about"
+                  >About</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ps-3 pb-3 px-xl-1 pb-xl-2" href="#menu"
+                  >Menu</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ps-3 pb-3 px-xl-1 pb-xl-2" href="#event"
+                  >Events</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ps-3 pb-3 px-xl-1 pb-xl-2" href="#chefs"
+                  >Chefs</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ps-3 pb-3 px-xl-1 pb-xl-2" href="#gallery"
+                  >Gallery</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link ps-3 pb-3 px-xl-1 pb-xl-2"
+                  data-bs-auto-close="outside"
+                  href="#"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu rounded-0 mx-3 my-2 m-xl-0 pe-xl-4">
+                  <li><a class="dropdown-item" href="#">Drop Down 1</a></li>
+                  <li class="dropend">
+                    <a
+                      class="dropdown-item"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      href="#"
+                      aria-expanded="false"
+                    >
+                      Deep Drop Down
+                    </a>
+                    <ul
+                      class="dropdown-menu mx-3 my-2 m-xl-0 rounded-0 pe-lg-4"
+                    >
+                      <li>
+                        <a href="" class="dropdown-item">Deep Drop Down 1</a>
+                      </li>
+                      <li>
+                        <a href="" class="dropdown-item">Deep Drop Down 2</a>
+                      </li>
+                      <li>
+                        <a href="" class="dropdown-item">Deep Drop Down 3</a>
+                      </li>
+                      <li>
+                        <a href="" class="dropdown-item">Deep Drop Down 4</a>
+                      </li>
+                      <li>
+                        <a href="" class="dropdown-item">Deep Drop Down 5</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Drop Down 2</a></li>
+                  <li><a class="dropdown-item" href="#">Drop Down 3</a></li>
+                  <li><a class="dropdown-item" href="#">Drop Down 4</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ps-3 pb-3 px-xl-1 pb-xl-2" href="#contact"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <button
+          class="btn btn-danger rounded-pill d-inline-block ms-auto ms-lg-0 px-4"
+        >
+          <a href="#bookatable" class="text-white text-decoration-none">Book a Table</a>
+        </button>
+        <button
+          class="navbar-toggler border-0 px-4"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+    <main data-bs-spy="scroll" data-bs-target="#scrollSpy" data-bs-offset="50" tabindex="0">
+      <section id="home" class="py-5 bg-body-secondary">
+        <div class="container text-center justify-content-center">
+          <div class="row justify-content-between align-items-center flex-column-reverse flex-lg-row">
+            <div class="col-lg-5 text-center text-lg-start">
+              <h1 class="pb-3 display-3">ENJOY YOUR HEALTHY</br>DELICIOUS FOOD</h1>
+              <p class="lead pb-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus enim culpa illo et aspernatur. Sit!</p>
+              <div class="homeButton d-flex align-items-center gap-4 justify-content-center justify-content-lg-start">
+                <a href="" class="btn btn-danger shadow rounded-pill px-5 py-2 fs-5">Book a Table</a>
+                <span class="lead d-flex justify-content-center gap-2">
+                <i class="fa-regular fa-circle-play text-danger fs-2 d-block my-auto"></i>
+                <button class="fs-5 mb-0 border-0 bg-transparent" data-bs-toggle="modal" data-bs-target="#watchVideo">Watch Video</b>
+                </span>
+              </div>
+            </div>
+            <div class="col-lg-5 mb-4 mb-lg-0">
+              <img
+                src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/hero-img.png"
+                alt="hero"
+                class="img-fluid m-auto d-block"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="about" class="py-5">
+        <div class="container text-center">
+          <div class="header pb-5">
+            <h6 class="text-body-secondary pb-2 opacity-50">ABOUT US</h6>
+            <h1 class="display-4 fw-lighter">LEARN MORE <span class="text-danger">ABOUT US</span></h1>
+          </div>
+          <div class="row justify-content-lg-around pb-5">
+            <div class="col-lg-6 d-flex align-items-end mb-3 mb-lg-0">
+              <div class="aboutContent bg-white px-5 py-3 mb-5 mx-auto w-75">
+                <p class="fw-bold lead">Book a Table</p>
+                <p class="text-danger fw-bold fs-4">+84 909 999 999</p>
+              </div>
+            </div>
+            <div class="col-lg-5 text-start">
+              <p class="fst-italic fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate ducimus labore in perspiciatis quibusdam perferendis officiis magni ad itaque sint!</p>
+              <ul class="lead list-unstyled">
+                <li>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                <li>Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+                <li>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+              </ul>
+              <p class="lead">Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+              <div class="aboutImage">
+                <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/about-2.jpg" alt="" class="img-fluid
+                ">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Why choose Yummy -->
+      <section id="whychoose" class="py-5 bg-body-secondary text-center">
+        <div class="container">
+          <div class="row align-items-start align-items-xl-center">
+            <div class="col-lg-4 mb-4 mb-xl-0">
+              <div class="why-box bg-danger text-white text-start p-4">
+                <h2 class="py-2 display-5 fw-bold lead">Why Choose Yummy?</h2>
+                <p class="py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus praesentium sequi itaque sint. Id maiores soluta dolore? Libero nisi, dolorum odit placeat molestias quaerat veritatis unde non nam veniam sint. Rerum ipsam nulla adipisci culpa. Architecto eos incidunt ullam ut!</p>
+                <button class="btn shadow-sm text-white fw-medium rounded-pill mx-auto d-block px-4 py-2">Learn More</button>
+              </div>
+            </div>
+            <div class="col-lg-8 flex-row">
+              <div class="row">
+                <div class="col-xl-4">
+                  <div class="icon-box py-5 px-4 bg-white d-flex justify-content-around flex-column align-items-center mb-3 mb-xl-0">
+                    <i class="bi bi-clipboard-data fs-2 text-danger d-block mb-auto flex-shrink-0 d-flex justify-content-center align-items-center"></i>
+                    <p class="fs-5 mb-3">Corporis voluptates officia eiusmod</p>
+                    <p class="fw-light mt-auto">Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                  </div>
+                </div>
+                <div class="col-xl-4">
+                  <div class="icon-box py-5 px-4 bg-white d-flex justify-content-around flex-column align-items-center mb-3 mb-xl-0">
+                    <i class="bi bi-gem fs-2 text-danger d-block mb-auto mb-5 flex-shrink-0 d-flex justify-content-center align-items-center"></i>
+                    <p class="fs-5 mb-3">Ullamco laboris ladore pan</p>
+                    <p class="fw-light mt-auto">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                  </div>
+                </div>
+                <div class="col-xl-4">
+                  <div class="icon-box py-5 px-4 bg-white d-flex justify-content-around flex-column align-items-center mb-3 mb-xl-0">
+                    <i class="bi bi-inboxes fs-2 text-danger d-block mb-auto mb-5 flex-shrink-0 d-flex justify-content-center align-items-center"></i>
+                    <p class="fs-5 mb-3 text-wrap">Labore consequatur incidid doloree</p>
+                    <p class="fw-light mt-auto">Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Numbers of Projects -->
+      <section class="py-5 text-center" id="projects">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+            <div class="col p-5">
+              <p class="lead display-4 fw-bold text-white">232</p>
+              <p class="fw-bold text-white text-opacity-75 fs-5">Clients</p>
+            </div>
+            <div class="col p-5">
+              <p class="lead display-4 fw-bold text-white">521</p>
+              <p class="fw-bold text-white text-opacity-75 fs-5">Projects</p>
+            </div>
+            <div class="col p-5">
+              <p class="lead display-4 fw-bold text-white">1453</p>
+              <p class="fw-bold text-white text-opacity-75 fs-5">Hours Of Support</p>
+            </div>
+            <div class="col p-5">
+              <p class="lead display-4 fw-bold text-white">32</p>
+              <p class="fw-bold text-white text-opacity-75 fs-5">Workers</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Menu -->
+      <section id="menu" class="py-5 text-center">
+        <div class="container">
+          <div class="header pb-3">
+            <h6 class="text-body-secondary pb-2 opacity-50">OUR MENU</h6>
+            <h1 class="display-4 fw-lighter">CHECK OUT <span class="text-danger">YUMMY MENU</span></h1>
+          </div>
+          <div class="row">
+            <ul class="nav justify-content-center pb-3" id="myTab" role="tablist">
+              <li class="nav-item mx-2" role="presentation">
+                <button class="nav-link active fs-5 fw-light text-secondary-emphasis" id="starters-tab" data-bs-toggle="tab" data-bs-target="#starters-tab-pane" type="button" role="tab" aria-controls="starters-tab-pane" aria-selected="true">Starters</button>
+              </li>
+              <li class="nav-item mx-2" role="presentation">
+                <button class="nav-link fs-5 fw-light text-secondary-emphasis" id="breakfast-tab" data-bs-toggle="tab" data-bs-target="#breakfast-tab-pane" type="button" role="tab" aria-controls="breakfast-tab-pane" aria-selected="false">Breakfast</button>
+              </li>
+              <li class="nav-item mx-2" role="presentation">
+                <button class="nav-link fs-5 fw-light text-secondary-emphasis" id="lunch-tab" data-bs-toggle="tab" data-bs-target="#lunch-tab-pane" type="button" role="tab" aria-controls="lunch-tab-pane" aria-selected="false">Lunch</button>
+              </li>
+              <li class="nav-item mx-2" role="presentation">
+                <button class="nav-link fs-5 fw-light text-secondary-emphasis" id="dinner-tab" data-bs-toggle="tab" data-bs-target="#dinner-tab-pane" type="button" role="tab" aria-controls="dinner-tab-pane" aria-selected="false">Dinner</button>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="starters-tab-pane" role="tabpanel" aria-labelledby="starters-tab" tabindex="0">
+                <div class="menu-header pt-3">
+                  <h6 class="text-body-secondary opacity-75 fw-normal m-0 small">MENU</h6>
+                  <h3 class="display-6 fw-medium text-danger">Starters</h3>
+                </div>
+                <div class="row row-cols-1 row-cols-lg-3">
+                  <div class="col p-5">
+                    <div class="card border-0">
+                      <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/menu/menu-item-1.png" alt="" class="card-img-top mb-3 mb-lg-0">
+                      <div class="card-body">
+                        <h4 class="card-title">Magnam Tiste</h4>
+                        <p class="card-text text-secondary lead text-opacity-75">Lorem ipsum dolor sit amet.</p>
+                        <p class="text-danger fw-bold fs-2">$5.95</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col p-5">
+                    <div class="card border-0">
+                      <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/menu/menu-item-2.png" alt="" class="card-img-top mb-3 mb-lg-0">
+                      <div class="card-body">
+                        <h4 class="card-title">Aut Luia</h4>
+                        <p class="card-text text-secondary lead text-opacity-75">Lorem, deren, trataro, filede, nerada</p>
+                        <p class="text-danger fw-bold fs-2">$14.95</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col p-5">
+                    <div class="card border-0">
+                      <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/menu/menu-item-3.png" alt="" class="card-img-top mb-3 mb-lg-0">
+                      <div class="card-body">
+                        <h4 class="card-title">Est Eligendi</h4>
+                        <p class="card-text text-secondary lead text-opacity-75">Lorem ipsum dolor sit amet.</p>
+                        <p class="text-danger fw-bold fs-2">$8.95</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col p-5">
+                    <div class="card border-0">
+                      <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/menu/menu-item-4.png" alt="" class="card-img-top mb-3 mb-lg-0">
+                      <div class="card-body">
+                        <h4 class="card-title">Eos Luibusdam</h4>
+                        <p class="card-text text-secondary lead text-opacity-75">Lorem, deren, trataro, filede, nerada</p>
+                        <p class="text-danger fw-bold fs-2">$12.95</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col p-5">
+                    <div class="card border-0">
+                      <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/menu/menu-item-5.png" alt="" class="card-img-top mb-3 mb-lg-0">
+                      <div class="card-body">
+                        <h4 class="card-title">Eos Luibusdam</h4>
+                        <p class="card-text text-secondary lead text-opacity-75">Lorem ipsum dolor sit amet.</p>
+                        <p class="text-danger fw-bold fs-2">$12.95</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col p-5">
+                    <div class="card border-0">
+                      <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/menu/menu-item-6.png" alt="" class="card-img-top mb-3 mb-lg-0">
+                      <div class="card-body">
+                        <h4 class="card-title">Laboriosam Direva</h4>
+                        <p class="card-text text-secondary lead text-opacity-75">Lorem, deren, trataro, filede, nerada</p>
+                        <p class="text-danger fw-bold fs-2">$9.95</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="breakfast-tab-pane" role="tabpanel" aria-labelledby="breakfast-tab" tabindex="0">
+                <div class="menu-header pt-3">
+                  <h6 class="text-body-secondary opacity-75 fw-normal m-0 small">MENU</h6>
+                  <h3 class="display-6 fw-medium text-danger">Breakfast</h3>
+                </div>
+                <div class="row row-cols-1 row-cols-lg-3">
+                  <div class="col p-5">
+                    <div class="card border-0">
+                      <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/menu/menu-item-1.png" alt="" class="card-img-top mb-3 mb-lg-0">
+                      <div class="card-body">
+                        <h4 class="card-title">Magnam Tiste</h4>
+                        <p class="card-text text-secondary lead text-opacity-75">Lorem ipsum dolor sit amet.</p>
+                        <p class="text-danger fw-bold fs-2">$5.95</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col p-5">
+                    <div class="card border-0">
+                      <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/menu/menu-item-2.png" alt="" class="card-img-top mb-3 mb-lg-0">
+                      <div class="card-body">
+                        <h4 class="card-title">Aut Luia</h4>
+                        <p class="card-text text-secondary lead text-opacity-75">Lorem, deren, trataro, filede, nerada</p>
+                        <p class="text-danger fw-bold fs-2">$14.95</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col p-5">
+                    <div class="card border-0">
+                      <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/menu/menu-item-3.png" alt="" class="card-img-top mb-3 mb-lg-0">
+                      <div class="card-body">
+                        <h4 class="card-title">Est Eligendi</h4>
+                        <p class="card-text text-secondary lead text-opacity-75">Lorem ipsum dolor sit amet.</p>
+                        <p class="text-danger fw-bold fs-2">$8.95</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col p-5">
+                    <div class="card border-0">
+                      <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/menu/menu-item-4.png" alt="" class="card-img-top mb-3 mb-lg-0">
+                      <div class="card-body">
+                        <h4 class="card-title">Eos Luibusdam</h4>
+                        <p class="card-text text-secondary lead text-opacity-75">Lorem, deren, trataro, filede, nerada</p>
+                        <p class="text-danger fw-bold fs-2">$12.95</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col p-5">
+                    <div class="card border-0">
+                      <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/menu/menu-item-5.png" alt="" class="card-img-top mb-3 mb-lg-0">
+                      <div class="card-body">
+                        <h4 class="card-title">Eos Luibusdam</h4>
+                        <p class="card-text text-secondary lead text-opacity-75">Lorem ipsum dolor sit amet.</p>
+                        <p class="text-danger fw-bold fs-2">$12.95</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col p-5">
+                    <div class="card border-0">
+                      <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/menu/menu-item-6.png" alt="" class="card-img-top mb-3 mb-lg-0">
+                      <div class="card-body">
+                        <h4 class="card-title">Laboriosam Direva</h4>
+                        <p class="card-text text-secondary lead text-opacity-75">Lorem, deren, trataro, filede, nerada</p>
+                        <p class="text-danger fw-bold fs-2">$9.95</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="lunch-tab-pane" role="tabpanel" aria-labelledby="lunch-tab" tabindex="0">
+                <div class="menu-header pt-3">
+                  <h6 class="text-body-secondary opacity-75 fw-normal m-0 small">MENU</h6>
+                  <h3 class="display-6 fw-medium text-danger">Lunch</h3>
+                </div>
+                <div class="row row-cols-1 row-cols-lg-3">
+                  <div class="col p-5">
+                    <div class="card border-0">
+                      <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/menu/menu-item-1.png" alt="" class="card-img-top mb-3 mb-lg-0">
+                      <div class="card-body">
+                        <h4 class="card-title">Magnam Tiste</h4>
+                        <p class="card-text text-secondary lead text-opacity-75">Lorem ipsum dolor sit amet.</p>
+                        <p class="text-danger fw-bold fs-2">$5.95</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col p-5">
+                    <div class="card border-0">
+                      <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/menu/menu-item-2.png" alt="" class="card-img-top mb-3 mb-lg-0">
+                      <div class="card-body">
+                        <h4 class="card-title">Aut Luia</h4>
+                        <p class="card-text text-secondary lead text-opacity-75">Lorem, deren, trataro, filede, nerada</p>
+                        <p class="text-danger fw-bold fs-2">$14.95</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col p-5">
+                    <div class="card border-0">
+                      <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/menu/menu-item-3.png" alt="" class="card-img-top mb-3 mb-lg-0">
+                      <div class="card-body">
+                        <h4 class="card-title">Est Eligendi</h4>
+                        <p class="card-text text-secondary lead text-opacity-75">Lorem ipsum dolor sit amet.</p>
+                        <p class="text-danger fw-bold fs-2">$8.95</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col p-5">
+                    <div class="card border-0">
+                      <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/menu/menu-item-4.png" alt="" class="card-img-top mb-3 mb-lg-0">
+                      <div class="card-body">
+                        <h4 class="card-title">Eos Luibusdam</h4>
+                        <p class="card-text text-secondary lead text-opacity-75">Lorem, deren, trataro, filede, nerada</p>
+                        <p class="text-danger fw-bold fs-2">$12.95</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col p-5">
+                    <div class="card border-0">
+                      <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/menu/menu-item-5.png" alt="" class="card-img-top mb-3 mb-lg-0">
+                      <div class="card-body">
+                        <h4 class="card-title">Eos Luibusdam</h4>
+                        <p class="card-text text-secondary lead text-opacity-75">Lorem ipsum dolor sit amet.</p>
+                        <p class="text-danger fw-bold fs-2">$12.95</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col p-5">
+                    <div class="card border-0">
+                      <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/menu/menu-item-6.png" alt="" class="card-img-top mb-3 mb-lg-0">
+                      <div class="card-body">
+                        <h4 class="card-title">Laboriosam Direva</h4>
+                        <p class="card-text text-secondary lead text-opacity-75">Lorem, deren, trataro, filede, nerada</p>
+                        <p class="text-danger fw-bold fs-2">$9.95</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="dinner-tab-pane" role="tabpanel" aria-labelledby="dinner-tab" tabindex="0">
+                <div class="menu-header pt-3">
+                  <h6 class="text-body-secondary opacity-75 fw-normal m-0 small">MENU</h6>
+                  <h3 class="display-6 fw-medium text-danger">Dinner</h3>
+                </div>
+                <div class="row row-cols-1 row-cols-lg-3">
+                  <div class="col p-5">
+                    <div class="card border-0">
+                      <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/menu/menu-item-1.png" alt="" class="card-img-top mb-3 mb-lg-0">
+                      <div class="card-body">
+                        <h4 class="card-title">Magnam Tiste</h4>
+                        <p class="card-text text-secondary lead text-opacity-75">Lorem ipsum dolor sit amet.</p>
+                        <p class="text-danger fw-bold fs-2">$5.95</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col p-5">
+                    <div class="card border-0">
+                      <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/menu/menu-item-2.png" alt="" class="card-img-top mb-3 mb-lg-0">
+                      <div class="card-body">
+                        <h4 class="card-title">Aut Luia</h4>
+                        <p class="card-text text-secondary lead text-opacity-75">Lorem, deren, trataro, filede, nerada</p>
+                        <p class="text-danger fw-bold fs-2">$14.95</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col p-5">
+                    <div class="card border-0">
+                      <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/menu/menu-item-3.png" alt="" class="card-img-top mb-3 mb-lg-0">
+                      <div class="card-body">
+                        <h4 class="card-title">Est Eligendi</h4>
+                        <p class="card-text text-secondary lead text-opacity-75">Lorem ipsum dolor sit amet.</p>
+                        <p class="text-danger fw-bold fs-2">$8.95</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col p-5">
+                    <div class="card border-0">
+                      <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/menu/menu-item-4.png" alt="" class="card-img-top mb-3 mb-lg-0">
+                      <div class="card-body">
+                        <h4 class="card-title">Eos Luibusdam</h4>
+                        <p class="card-text text-secondary lead text-opacity-75">Lorem, deren, trataro, filede, nerada</p>
+                        <p class="text-danger fw-bold fs-2">$12.95</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col p-5">
+                    <div class="card border-0">
+                      <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/menu/menu-item-5.png" alt="" class="card-img-top mb-3 mb-lg-0">
+                      <div class="card-body">
+                        <h4 class="card-title">Eos Luibusdam</h4>
+                        <p class="card-text text-secondary lead text-opacity-75">Lorem ipsum dolor sit amet.</p>
+                        <p class="text-danger fw-bold fs-2">$12.95</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col p-5">
+                    <div class="card border-0">
+                      <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/menu/menu-item-6.png" alt="" class="card-img-top mb-3 mb-lg-0">
+                      <div class="card-body">
+                        <h4 class="card-title">Laboriosam Direva</h4>
+                        <p class="card-text text-secondary lead text-opacity-75">Lorem, deren, trataro, filede, nerada</p>
+                        <p class="text-danger fw-bold fs-2">$9.95</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
+      <!-- Testimonials -->
+      <section id="testimomial" class="py-5 text-center bg-body-secondary">
+        <div class="header mb-5 pb-3">
+          <h6 class="text-body-secondary pb-2 opacity-50">TESTIMONIALS</h6>
+          <h1 class="display-4 fw-lighter">WHAT ARE THEY <span class="text-danger">SAYING ABOUT US</span></h1>
+        </div>
+        <div class="container">
+          <div id="testimonialsIndicators" class="carousel slide pb-5">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row w-75 mx-auto">
+                  <div class="col-lg-8 text-start mb-3 mb-lg-0 border-start border-3 border-danger ps-4">
+                    <blockquote>
+                      <i class="fa-solid fa-quote-left text-danger pe-2"></i>
+                      <span class="fst-italic">Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
+                      <i class="fa-solid fa-quote-right text-danger ps-2"></i>
+                    </blockquote>
+                    <h4 class="text-dark fw-bold mb-1">Saul Goodman</h4>
+                    <p class="text-body-secondary mb-1">CEO & Founder</p>
+                    <div class="stars">
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <img width="70%" height="70%" src="https://randomuser.me/api/portraits/men/20.jpg" alt="" class="img-fluid rounded-circle bg-white p-1 object-fit-cover">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row w-75 mx-auto">
+                  <div class="col-lg-8 text-start mb-3 mb-lg-0 border-start border-3 border-danger ps-4">
+                    <blockquote>
+                      <i class="fa-solid fa-quote-left text-danger pe-2"></i>
+                      <span class="fst-italic">xport tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
+                      <i class="fa-solid fa-quote-right text-danger ps-2"></i>
+                    </blockquote>
+                    <h4 class="text-dark fw-bold mb-1">Sara Wilsson</h4>
+                    <p class="text-body-secondary mb-1">Designer</p>
+                    <div class="stars">
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <img width="70%" height="70%" src="https://randomuser.me/api/portraits/women/20.jpg" alt="" class="img-fluid rounded-circle bg-white p-1 object-fit-cover">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row w-75 mx-auto">
+                  <div class="col-lg-8 text-start mb-3 mb-lg-0 border-start border-3 border-danger ps-4">
+                    <blockquote>
+                      <i class="fa-solid fa-quote-left text-danger pe-2"></i>
+                      <span class="fst-italic">Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
+                      <i class="fa-solid fa-quote-right text-danger ps-2"></i>
+                    </blockquote>
+                    <h4 class="text-dark fw-bold mb-1">Jena Karlis</h4>
+                    <p class="text-body-secondary mb-1">Store Owner</p>
+                    <div class="stars">
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <img width="70%" height="70%" src="https://randomuser.me/api/portraits/women/15.jpg" alt="" class="img-fluid rounded-circle bg-white p-1 object-fit-cover">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row w-75 mx-auto">
+                  <div class="col-lg-8 text-start mb-3 mb-lg-0 border-start border-3 border-danger ps-4">
+                    <blockquote>
+                      <i class="fa-solid fa-quote-left text-danger pe-2"></i>
+                      <span class="fst-italic">Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
+                      <i class="fa-solid fa-quote-right text-danger ps-2"></i>
+                    </blockquote>
+                    <h4 class="text-dark fw-bold mb-1">John Larson</h4>
+                    <p class="text-body-secondary mb-1">Entrepreneur</p>
+                    <div class="stars">
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <img width="70%" height="70%" src="https://randomuser.me/api/portraits/men/15.jpg" alt="" class="img-fluid rounded-circle bg-white p-1 object-fit-cover">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#testimonialsIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#testimonialsIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#testimonialsIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#testimonialsIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Events -->
+      <section id="event" class="py-5 text-center">
+        <div class="header mb-5 pb-3">
+          <h6 class="text-body-secondary pb-2 opacity-50">EVENTS</h6>
+          <h1 class="display-4 fw-lighter">SHARE <span class="text-danger">YOUR MOMENTS</span> IN OUR RESTAURANT</h1>
+        </div>
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper pb-5">
+            <div class="swiper-slide d-none d-xl-block slide-1">
+              <div class="card border-0 img-1">
+                <div class="card-body text-white p-4 d-flex flex-column mt-auto text-start align-items-start justify-content-end">
+                  <h4>Custom Parties</h4>
+                  <h2>$99</h2>
+                  <p>Quo corporis voluptas ea ad. Consectetur inventore sapiente ipsum voluptas eos omnis facere. Enim facilis veritatis id est rem repudiandae nulla expedita quas.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide d-none d-xl-block slide-2">
+              <div class="card border-0 img-2">
+                <div class="card-body text-white p-4 d-flex flex-column mt-auto text-start align-items-start justify-content-end">
+                  <h4>Private Parties</h4>
+                  <h2>$289</h2>
+                  <p>In delectus sint qui et enim. Et ab repudiandae inventore quaerat doloribus. Facere nemo vero est ut dolores ea assumenda et. Delectus saepe accusamus aspernatur.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide d-none d-xl-block slide-3">
+              <div class="card border-0 img-3">
+                <div class="card-body text-white p-4 d-flex flex-column mt-auto text-start align-items-start justify-content-end">
+                  <h4>Birthday Parties</h4>
+                  <h2>$499</h2>
+                  <p>Laborum aperiam atque omnis minus omnis est qui assumenda quos. Quis id sit quibusdam. Esse quisquam ducimus officia ipsum ut quibusdam maxime. Non enim perspiciatis.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide slide-4">
+              <div class="card border-0 img-1">
+                <div class="card-body text-white p-4 d-flex flex-column mt-auto text-start align-items-start justify-content-end">
+                  <h4>Custom Parties</h4>
+                  <h2>$99</h2>
+                  <p>Quo corporis voluptas ea ad. Consectetur inventore sapiente ipsum voluptas eos omnis facere. Enim facilis veritatis id est rem repudiandae nulla expedita quas.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide slide-5">
+              <div class="card border-0 img-2">
+                <div class="card-body text-white p-4 d-flex flex-column mt-auto text-start align-items-start justify-content-end">
+                  <h4>Private Parties</h4>
+                  <h2>$289</h2>
+                  <p>In delectus sint qui et enim. Et ab repudiandae inventore quaerat doloribus. Facere nemo vero est ut dolores ea assumenda et. Delectus saepe accusamus aspernatur.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide slide-6">
+              <div class="card border-0 img-3">
+                <div class="card-body text-white p-4 d-flex flex-column mt-auto text-start align-items-start justify-content-end">
+                  <h4>Birthday Parties</h4>
+                  <h2>$499</h2>
+                  <p>Laborum aperiam atque omnis minus omnis est qui assumenda quos. Quis id sit quibusdam. Esse quisquam ducimus officia ipsum ut quibusdam maxime. Non enim perspiciatis.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide d-none d-xl-block slide-7">
+              <div class="card border-0 img-1">
+                <div class="card-body text-white p-4 d-flex flex-column mt-auto text-start align-items-start justify-content-end">
+                  <h4>Custom Parties</h4>
+                  <h2>$99</h2>
+                  <p>Quo corporis voluptas ea ad. Consectetur inventore sapiente ipsum voluptas eos omnis facere. Enim facilis veritatis id est rem repudiandae nulla expedita quas.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide d-none d-xl-block slide-8">
+              <div class="card border-0 img-2">
+                <div class="card-body text-white p-4 d-flex flex-column mt-auto text-start align-items-start justify-content-end">
+                  <h4>Private Parties</h4>
+                  <h2>$289</h2>
+                  <p>In delectus sint qui et enim. Et ab repudiandae inventore quaerat doloribus. Facere nemo vero est ut dolores ea assumenda et. Delectus saepe accusamus aspernatur.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide d-none d-xl-block slide-9">
+              <div class="card border-0 img-3">
+                <div class="card-body text-white p-4 d-flex flex-column mt-auto text-start align-items-start justify-content-end">
+                  <h4>Birthday Parties</h4>
+                  <h2>$499</h2>
+                  <p>Laborum aperiam atque omnis minus omnis est qui assumenda quos. Quis id sit quibusdam. Esse quisquam ducimus officia ipsum ut quibusdam maxime. Non enim perspiciatis.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+      <!-- Chefs -->
+      <section id="chefs" class="py-5 text-center bg-body-secondary">
+        <div class="header mb-5 pb-3">
+          <h6 class="text-body-secondary pb-2 opacity-50">CHEFS</h6>
+          <h1 class="display-4 fw-lighter">OUR <span class="text-danger">PROFFESIONAL</span> CHEFS</h1>
+        </div>
+        <div class="container">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+            <div class="col">
+              <div class="card shadow-sm mb-4 h-100 position-relative">
+                <div class="card-image position-relative">
+                  <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/chefs/chefs-1.jpg" alt="Chef1" class="card-img-top img-fluid">
+                  <svg class="position-absolute bottom-0 start-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,256L20,218.7C40,181,80,107,120,101.3C160,96,200,160,240,202.7C280,245,320,267,360,261.3C400,256,440,224,480,224C520,224,560,256,600,234.7C640,213,680,139,720,112C760,85,800,107,840,144C880,181,920,235,960,256C1000,277,1040,267,1080,266.7C1120,267,1160,277,1200,256C1240,235,1280,181,1320,170.7C1360,160,1400,192,1420,208L1440,224L1440,320L1420,320C1400,320,1360,320,1320,320C1280,320,1240,320,1200,320C1160,320,1120,320,1080,320C1040,320,1000,320,960,320C920,320,880,320,840,320C800,320,760,320,720,320C680,320,640,320,600,320C560,320,520,320,480,320C440,320,400,320,360,320C320,320,280,320,240,320C200,320,160,320,120,320C80,320,40,320,20,320L0,320Z"></path></svg>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title fw-bold">Walter White</h4>
+                  <p class="text-secondary text-opacity-50">Master Chef</p>
+                  <p class="card-text fst-italic fw-light py-3">Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum exercitationem iure minima enim corporis et voluptate.</p>
+                </div>
+                <div class="card-icons d-flex flex-column text-secondary position-absolute top-0 end-0 mt-3 me-1 bg-secondary-subtle text-center">
+                  <i class="bi bi-twitter fs-5 mx-2 d-block"></i>
+                  <i class="bi bi-facebook fs-5 mx-2 d-block"></i>
+                  <i class="bi bi-instagram fs-5 mx-2 d-block"></i>
+                  <i class="bi bi-linkedin fs-5 mx-2 d-block"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm mb-4 h-100">
+                <div class="card-image position-relative">
+                  <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/chefs/chefs-2.jpg" alt="Chef2" class="card-img-top img-fluid">
+                  <svg class="position-absolute bottom-0 start-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,192L20,165.3C40,139,80,85,120,69.3C160,53,200,75,240,80C280,85,320,75,360,85.3C400,96,440,128,480,160C520,192,560,224,600,218.7C640,213,680,171,720,149.3C760,128,800,128,840,149.3C880,171,920,213,960,240C1000,267,1040,277,1080,266.7C1120,256,1160,224,1200,202.7C1240,181,1280,171,1320,138.7C1360,107,1400,53,1420,26.7L1440,0L1440,320L1420,320C1400,320,1360,320,1320,320C1280,320,1240,320,1200,320C1160,320,1120,320,1080,320C1040,320,1000,320,960,320C920,320,880,320,840,320C800,320,760,320,720,320C680,320,640,320,600,320C560,320,520,320,480,320C440,320,400,320,360,320C320,320,280,320,240,320C200,320,160,320,120,320C80,320,40,320,20,320L0,320Z"></path></svg>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title fw-bold">Sarah Johnson</h4>
+                  <p class="text-secondary text-opacity-50">Patissier</p>
+                  <p class="card-text fst-italic fw-light py-3">Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil minima suscipit corporis. Voluptate sed quas reiciendis animi neque sapiente.</p>
+                </div>
+                <div class="card-icons d-flex flex-column text-secondary position-absolute top-0 end-0 mt-3 me-1 bg-secondary-subtle text-center">
+                  <i class="bi bi-twitter fs-5 mx-2 d-block"></i>
+                  <i class="bi bi-facebook fs-5 mx-2 d-block"></i>
+                  <i class="bi bi-instagram fs-5 mx-2 d-block"></i>
+                  <i class="bi bi-linkedin fs-5 mx-2 d-block"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm mb-4 h-100">
+                <div class="card-image position-relative">
+                  <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/chefs/chefs-3.jpg" alt="Chef3" class="card-img-top img-fluid">
+                  <svg class="position-absolute bottom-0 start-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,96L20,117.3C40,139,80,181,120,170.7C160,160,200,96,240,74.7C280,53,320,75,360,69.3C400,64,440,32,480,53.3C520,75,560,149,600,160C640,171,680,117,720,101.3C760,85,800,107,840,144C880,181,920,235,960,229.3C1000,224,1040,160,1080,144C1120,128,1160,160,1200,160C1240,160,1280,128,1320,96C1360,64,1400,32,1420,16L1440,0L1440,320L1420,320C1400,320,1360,320,1320,320C1280,320,1240,320,1200,320C1160,320,1120,320,1080,320C1040,320,1000,320,960,320C920,320,880,320,840,320C800,320,760,320,720,320C680,320,640,320,600,320C560,320,520,320,480,320C440,320,400,320,360,320C320,320,280,320,240,320C200,320,160,320,120,320C80,320,40,320,20,320L0,320Z"></path></svg>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title fw-bold">William Anderson</h4>
+                  <p class="text-secondary text-opacity-50">Cook</p>
+                  <p class="card-text fst-italic fw-light py-3">Vero omnis enim consequatur. Voluptas consectetur unde qui molestiae deserunt. Voluptates enim aut architecto porro aspernatur molestiae modi.</p>
+                </div>
+                <div class="card-icons d-flex flex-column text-secondary position-absolute top-0 end-0 mt-3 me-1 bg-secondary-subtle text-center">
+                  <i class="bi bi-twitter fs-5 mx-2 d-block"></i>
+                  <i class="bi bi-facebook fs-5 mx-2 d-block"></i>
+                  <i class="bi bi-instagram fs-5 mx-2 d-block"></i>
+                  <i class="bi bi-linkedin fs-5 mx-2 d-block"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Book a table -->
+      <section id="bookatable" class="py-5 text-center">
+        <div class="header mb-5 pb-3">
+          <h6 class="text-body-secondary pb-2 opacity-50">BOOK A TABLE</h6>
+          <h1 class="display-4 fw-lighter">BOOK <span class="text-danger">YOUR STAY</span> WITH US</h1>
+        </div>
+        <div class="container bg-body-secondary">
+          <div class="row">
+            <div class="col-lg-4 image"></div>
+            <div class="col-lg-8">
+              <form class="py-5 px-3">
+                <div class="row py-3 gy-3">
+                  <div class="col-md-6 col-lg-4">
+                    <input class="form-control px-3 py-2 border-secondary-subtle border-opacity-25 rounded-0" type="text" placeholder="Your Name">
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <input class="form-control px-3 py-2 border-secondary-subtle border-1 rounded-0" type="email" placeholder="Your Email">
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <input class="form-control px-3 py-2 border-secondary-subtle border-1 rounded-0" type="text" placeholder="Your Phone">
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <input class="form-control px-3 py-2 border-secondary-subtle border-1 rounded-0" type="text" placeholder="Date">
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <input class="form-control px-3 py-2 border-secondary-subtle border-1 rounded-0" type="text" placeholder="Time">
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <input class="form-control px-3 py-2 border-secondary-subtle border-1 p-3 rounded-0" type="number" placeholder="# of people">
+                  </div>
+                </div>
+                <div class="row py-3 px-2">
+                  <textarea name="message" class="form-control border-secondary-subtle border-opacity-50 p-3" id="" cols="30" rows="5" placeholder="Message"></textarea>
+                </div>
+                <button class="btn btn-danger rounded-pill text-white  my-3 py-2 px-5 fs-5">Book a Table</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Gallery -->
+      <section id="gallery" class="py-5 bg-body-secondary text-center">
+        <div class="header mb-2 pb-3">
+          <h6 class="text-body-secondary pb-2 opacity-50">GALLERY</h6>
+          <h1 class="display-4 fw-lighter">CHECK <span class="text-danger">OUR GALLERY</span></h1>
+        </div>
+        <div class="container">
+          <div class="swiper gallerySwiper" id="gallery-wrapper">
+            <div class="swiper-wrapper pb-5 d-flex align-items-center">
+              <div class="swiper-slide gallery-slide">
+                <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="swiper-slide gallery-slide">
+                <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="swiper-slide gallery-slide">
+                <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="swiper-slide gallery-slide">
+                <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="swiper-slide gallery-slide">
+                <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="swiper-slide gallery-slide">
+                <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="swiper-slide gallery-slide">
+                <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="swiper-slide gallery-slide">
+                <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact -->
+      <section id="contact" class="py-5 text-center">
+        <div class="header mb-2 pb-3">
+          <h6 class="text-body-secondary pb-2 opacity-50">CONTACT</h6>
+          <h1 class="display-4 fw-lighter">NEED HELP? <span class="text-danger">CONTACT US</span></h1>
+        </div>
+        <div class="container">
+          <div class="row gy-3 mb-5">
+            <div class="col-md-6">
+              <div class="contact-body h-100 bg-body-secondary d-flex align-items-center p-4">
+                <i class="bi bi-map me-3 flex-shrink-0 text-white fs-3 contact-icon d-flex justify-content-center align-items-center"></i>
+                <div class="contact-text text-start">
+                  <h4 class="text-secondary fw-bold">Our Address</h4>
+                  <p class="text-wrap mb-0">A108 Adam Street, New York, NY 535022</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="contact-body h-100 bg-body-secondary d-flex align-items-center p-4">
+                <i class="bi bi-envelope me-3 flex-shrink-0 text-white fs-3 contact-icon d-flex justify-content-center align-items-center"></i>
+                <div class="contact-text text-start">
+                  <h4 class="text-secondary fw-bold">Email Us</h4>
+                  <p class="text-wrap mb-0">contact@example.com</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="contact-body h-100 bg-body-secondary d-flex align-items-center p-4">
+                <i class="bi bi-telephone me-3 flex-shrink-0 text-white fs-3 contact-icon d-flex justify-content-center align-items-center"></i>
+                <div class="contact-text text-start">
+                  <h4 class="text-secondary fw-bold">Call Us</h4>
+                  <p class="text-wrap mb-0">+1 5589 55488 55</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="contact-body h-100 bg-body-secondary d-flex align-items-center p-4">
+                <i class="bi bi-share me-3 flex-shrink-0 text-white fs-3 contact-icon d-flex justify-content-center align-items-center"></i>
+                <div class="contact-text text-start">
+                  <h4 class="text-secondary fw-bold">Opening Hours</h4>
+                  <p class="text-wrap mb-0"><b>Mon-Sat:</b> 11AM - 23PM; <b>Sunday:</b> Closed</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <form class="p-4 shadow">
+            <div class="row mb-3">
+              <div class="col-xl-6 mb-3 mb-xl-0 px-2">
+                <input class="form-control px-2 py-3" type="text" required placeholder="Your Name">
+              </div>
+              <div class="col-xl-6 px-2">
+                <input class="form-control px-2 py-3" type="email" required placeholder="Your Email">
+              </div>
+            </div>
+            <div class="row mb-3 px-2">
+              <input class="form-control px-2 py-3" type="text" required placeholder="Subject">
+            </div>
+            <div class="row mb-5 px-2">
+              <textarea class="form-control" name="message" cols="30" rows="5" required placeholder="Message"></textarea>
+            </div>
+            <button class="btn btn-danger text-white rounded-pill px-5 py-3 fs-5">Send Message</button>
+          </form>
+        </div>
+      </section>
+      <!-- Footer -->
+      <footer class="pt-5 text-center bg-dark text-light">
+        <div class="container">
+          <div class="row gy-4 mb-5">
+            <div class="col-lg-3 col-md-6 d-flex">
+              <i class="bi bi-geo-alt fs-4 me-3"></i>
+              <div class="footer-content text-start">
+                <h5>Address</h5>
+                <p class="text-secondary mb-0 small">A108 Adam Street</br>New York, NY 535022 - US</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 d-flex">
+              <i class="bi bi-telephone fs-4 me-3"></i>
+              <div class="footer-content text-start">
+                <h5>Reservations</h5>
+                <p class="text-secondary mb-0 small"><b>Phone:</b> +1 5589 55488 55</br><b>Email:</b> info@example.com</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 d-flex">
+              <i class="bi bi-clock fs-4 me-3"></i>
+              <div class="footer-content text-start">
+                <h5>Opening Hours</h5>
+                <p class="text-secondary mb-0 small"><b>Mon-Sat:</b> 11AM - 23PM</br><b>Sunday:</b> Closed</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-start">
+              <h5>Follow Us</h5>
+              <div class="footer-icons d-flex">
+                <i class="bi bi-twitter fs-5 me-2 d-flex justify-content-center align-items-center text-secondary"></i>
+                <i class="bi bi-facebook fs-5 me-2 d-flex justify-content-center align-items-center text-secondary"></i>
+                <i class="bi bi-instagram fs-5 me-2 d-flex justify-content-center align-items-center text-secondary"></i>
+                <i class="bi bi-linkedin fs-5 me-2 d-flex justify-content-center align-items-center text-secondary"></i>
+              </div>
+            </div>
+          </div>
+          <div class="row text-secondary border-top border-1 border-secondary border-opacity-50 pt-5">
+            <p class="lead">&copy; Copyright <b>TUHONGLE</b>. All Rights Reversed</p>
+            <p>Design by <a href="" class="text-light text-decoration-none">ME</a></p>
+          </div>
+        </div>
+        <a href="#" class="text-white fw-bold d-flex align-items-center justify-content-center" id="arrowup">
+          <i class="bi bi-arrow-up"></i>
+        </a>
+      </footer>
+    </main>
+
+    <!-- Modal content -->
+    <div class="modal fade" id="watchVideo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+        <div class="modal-content bg-dark bg-opacity-75 position-relative d-flex justify-content-center align-items-center">
+            <button type="button" class="btn-close text-white btn-lg position-absolute top-0 end-0 m-4" data-bs-dismiss="modal" aria-label="Close"></button>
+            <iframe width="960" height="540" src="https://www.youtube.com/embed/f6YDKF0LVWw?autoplay=1&mute=false" title="Nayeon POP POP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    
+    <!-- ======= bootstrap 5 javascript here! ======= -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
